@@ -7,7 +7,6 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "Alex Vihlayew" => "vihlayew.alex@gmail.com" }
   spec.platform     = :ios, "8.0"
-  spec.source       = { :http => 'file:' + __dir__ + "/" }
-  # spec.source       = { :git => "https://github.com/VihlayewAlex/UIOutlineView", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/VihlayewAlex/UIOutlineView.git", :tag => "#{spec.version}" }
   spec.source_files = "UIOutlineView/Sources/**/*.{h,m}"
 end
