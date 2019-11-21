@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		FAB95C4E23860FFD00F76470 /* UIOutlineView.h in Headers */ = {isa = PBXBuildFile; fileRef = FAB95C4C23860FFD00F76470 /* UIOutlineView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAB95C5A2386103D00F76470 /* SRTree.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB95C562386103D00F76470 /* SRTree.m */; };
+		FAB95C5B2386103D00F76470 /* SRTree.h in Headers */ = {isa = PBXBuildFile; fileRef = FAB95C572386103D00F76470 /* SRTree.h */; };
+		FAB95C5C2386103D00F76470 /* OutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB95C582386103D00F76470 /* OutlineView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FAB95C4923860FFD00F76470 /* UIOutlineView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIOutlineView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB95C4C23860FFD00F76470 /* UIOutlineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIOutlineView.h; sourceTree = "<group>"; };
 		FAB95C4D23860FFD00F76470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB95C562386103D00F76470 /* SRTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRTree.m; sourceTree = "<group>"; };
+		FAB95C572386103D00F76470 /* SRTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRTree.h; sourceTree = "<group>"; };
+		FAB95C582386103D00F76470 /* OutlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineView.m; sourceTree = "<group>"; };
+		FAB95C5E238617EE00F76470 /* OutlineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OutlineView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,9 +54,29 @@
 			isa = PBXGroup;
 			children = (
 				FAB95C4C23860FFD00F76470 /* UIOutlineView.h */,
+				FAB95C5D238617B700F76470 /* Sources */,
 				FAB95C4D23860FFD00F76470 /* Info.plist */,
 			);
 			path = UIOutlineView;
+			sourceTree = "<group>";
+		};
+		FAB95C552386103D00F76470 /* SRTree */ = {
+			isa = PBXGroup;
+			children = (
+				FAB95C562386103D00F76470 /* SRTree.m */,
+				FAB95C572386103D00F76470 /* SRTree.h */,
+			);
+			path = SRTree;
+			sourceTree = "<group>";
+		};
+		FAB95C5D238617B700F76470 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FAB95C552386103D00F76470 /* SRTree */,
+				FAB95C5E238617EE00F76470 /* OutlineView.h */,
+				FAB95C582386103D00F76470 /* OutlineView.m */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,6 +86,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB95C5B2386103D00F76470 /* SRTree.h in Headers */,
 				FAB95C4E23860FFD00F76470 /* UIOutlineView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,6 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB95C5A2386103D00F76470 /* SRTree.m in Sources */,
+				FAB95C5C2386103D00F76470 /* OutlineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +294,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = UIOutlineView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -272,6 +303,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vihlayew.UIOutlineView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -287,6 +319,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = UIOutlineView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,6 +328,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vihlayew.UIOutlineView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -14,6 +14,4 @@ FOUNDATION_EXPORT double UIOutlineViewVersionNumber;
 //! Project version string for UIOutlineView.
 FOUNDATION_EXPORT const unsigned char UIOutlineViewVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <UIOutlineView/PublicHeader.h>
-
-
+#import "Sources/OutlineView.h"
