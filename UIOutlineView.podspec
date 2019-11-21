@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "UIOutlineView"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "OutlineView for iOS"
   spec.description  = "UIOutlineView is an iOS analogue for NSOutlineView class available for macOS"
   spec.homepage     = "https://github.com/VihlayewAlex/UIOutlineView"
