@@ -16,6 +16,27 @@ it, simply add the following line to your Podfile:
 pod "UIOutlineView"
 ```
 
+## Usage
+
+### Import
+Don't forget to add import:
+```swift
+import UIOutlineView
+```
+
+### Register cells
+As for UITableView you should register cells you will use in OutlineView:
+```swift
+outlineView.register(YourCell.self, forCellReuseIdentifier: "cell")
+```
+
+### DataSource and Delegate
+UIOutlineView is filled with data from UIOutlineViewDataSource and events handling is performed by UIOutlineViewDelegate. Protocols are almost similar to NSOutlineView's DataSource and Delegate:
+```swift
+outlineView.outline_delegate = self
+outlineView.outline_dataSource = self
+```
+
 ## Author
 
 VihlayewAlex, vihlayew.alex@gmail.com
