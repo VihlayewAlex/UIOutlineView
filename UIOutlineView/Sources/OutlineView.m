@@ -92,7 +92,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SRTree* node = [_orderedContentArray objectAtIndex:indexPath.row];
-    return [_outline_delegate outlineView:self cellForItem:node.object];
+    UITableViewCell* cell = [_outline_delegate outlineView:self cellForItem:node.object];
+    if ([cell conformsToProtocol:@protocol(ExpandCollapseDisplaying)]) {
+        if (node.isCollapsed) {
+            [cell performSelector:@selector(collapse)];
+        } else {
+            [cell performSelector:@selector(expand)];
+        }
+    }
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -122,7 +130,6 @@
     
     UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
     if ([cell conformsToProtocol:@protocol(ExpandCollapseDisplaying)]) {
-        
         if (node.isCollapsed) {
             [cell performSelector:@selector(collapse)];
         } else {
